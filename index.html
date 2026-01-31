@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootballFanStore - Online Jerseys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎉 Free Shipping on Orders Above ₹1499 | Use Code: <strong>JERSEY10</strong> for 10% Off!</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="FootballFanStore Logo">
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav-links">
+                    <li><a href="#wc2026" class="nav-link">World Cup 2026</a></li>
+                    <li><a href="#club" class="nav-link">Club Jerseys</a></li>
+                    <li><a href="#retro" class="nav-link">Retro Collection</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+                <a href="#" class="cart-btn" aria-label="Cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8" cy="21" r="1"></circle>
+                        <circle cx="19" cy="21" r="1"></circle>
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Wear Your <span>Passion</span></h1>
+            <p class="hero-subtitle">Premium football jerseys for true fans. World Cup 2026, Club Classics & Retro Legends.</p>
+            <div class="hero-buttons">
+                <a href="#wc2026" class="btn btn-primary">Shop World Cup 2026</a>
+                <a href="#club" class="btn btn-secondary">Explore Collections</a>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path>
+                            <path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path>
+                            <circle cx="7" cy="18" r="2"></circle>
+                            <path d="M15 18H9"></path>
+                            <circle cx="17" cy="18" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div class="badge-text">
+                        <h4>Free Shipping</h4>
+                        <p>On orders above ₹1499</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <div class="badge-text">
+                        <h4>Premium Quality</h4>
+                        <p>100% authentic materials</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="badge-text">
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated customer care</p>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"></path>
+                            <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"></path>
+                            <path d="M12 3v6"></path>
+                        </svg>
+                    </div>
+                    <div class="badge-text">
+                        <h4>Easy Returns</h4>
+                        <p>7-day return policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Cup 2026 Section -->
+    <section class="product-section" id="wc2026">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">New Arrivals</span>
+                <h2 class="section-title">World Cup 2026 Kits</h2>
+                <p class="section-subtitle">Get ready for the biggest tournament! Shop national team jerseys for USA, Mexico, Canada & more.</p>
+            </div>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-1.jpg" alt="Argentina Home Jersey 2026">
+                        <span class="product-badge">New</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Argentina Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-2.jpg" alt="Brazil Home Jersey 2026">
+                        <span class="product-badge">New</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Brazil Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-3.jpg" alt="Germany Away Jersey 2026">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Germany Away Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,399</span>
+                            <span class="original-price">₹1,899</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-4.jpg" alt="France Home Jersey 2026">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">France Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-5.jpg" alt="Portugal Home Jersey 2026">
+                        <span class="product-badge">New</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Portugal Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-6.jpg" alt="Spain Home Jersey 2026">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Spain Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-7.jpg" alt="England Home Jersey 2026">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">England Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,399</span>
+                            <span class="original-price">₹1,899</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/wc2026-8.jpg" alt="Netherlands Home Jersey 2026">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Netherlands Home Jersey 2026</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,299</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-outline">View All World Cup Jerseys</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Jerseys Section -->
+    <section class="product-section alt-bg" id="club">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fan Favorites</span>
+                <h2 class="section-title">Club Jerseys 2025-26</h2>
+                <p class="section-subtitle">Support your favorite club! Premium jerseys from top European leagues.</p>
+            </div>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-1.jpg" alt="Real Madrid Home Jersey">
+                        <span class="product-badge">Bestseller</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Real Madrid Home Jersey 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-2.jpg" alt="Barcelona Home Jersey">
+                        <span class="product-badge">Bestseller</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Barcelona Home Jersey 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-3.jpg" alt="Manchester United Home Jersey">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Manchester United Home 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-4.jpg" alt="Liverpool Home Jersey">
+                        <span class="product-badge hot">Hot</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Liverpool Home Jersey 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-5.jpg" alt="PSG Home Jersey">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">PSG Home Jersey 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-6.jpg" alt="Bayern Munich Home Jersey">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Bayern Munich Home 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-7.jpg" alt="Juventus Home Jersey">
+                        <span class="product-badge">New</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Juventus Home Jersey 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/club-8.jpg" alt="AC Milan Home Jersey">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">AC Milan Home Jersey 25/26</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,199</span>
+                            <span class="original-price">₹1,699</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-outline">View All Club Jerseys</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retro Collection Section -->
+    <section class="product-section" id="retro">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Timeless Classics</span>
+                <h2 class="section-title">Retro Collection</h2>
+                <p class="section-subtitle">Relive the glory days! Iconic jerseys from football's greatest moments.</p>
+            </div>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-1.jpg" alt="Brazil 2002 World Cup Jersey">
+                        <span class="product-badge">Classic</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Brazil 2002 World Cup Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹999</span>
+                            <span class="original-price">₹1,499</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-2.jpg" alt="Argentina 1986 Maradona Jersey">
+                        <span class="product-badge">Legend</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Argentina 1986 Maradona Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,099</span>
+                            <span class="original-price">₹1,599</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-3.jpg" alt="Manchester United 1999 Treble Jersey">
+                        <span class="product-badge">Classic</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Man United 1999 Treble Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹999</span>
+                            <span class="original-price">₹1,499</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-4.jpg" alt="AC Milan 2007 Champions League Jersey">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">AC Milan 2007 UCL Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹999</span>
+                            <span class="original-price">₹1,499</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-5.jpg" alt="Barcelona 2009 Messi Jersey">
+                        <span class="product-badge">Legend</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Barcelona 2009 Messi Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,099</span>
+                            <span class="original-price">₹1,599</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-6.jpg" alt="Real Madrid 2002 Zidane Jersey">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Real Madrid 2002 Zidane Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹999</span>
+                            <span class="original-price">₹1,499</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-7.jpg" alt="Italy 2006 World Cup Jersey">
+                        <span class="product-badge">Classic</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Italy 2006 World Cup Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹999</span>
+                            <span class="original-price">₹1,499</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product Card 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/products/retro-8.jpg" alt="France 1998 Zidane Jersey">
+                        <span class="product-badge">Legend</span>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">France 1998 Zidane Jersey</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹1,099</span>
+                            <span class="original-price">₹1,599</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="#" class="btn btn-outline">View All Retro Jerseys</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join the Fan Club</h2>
+                <p>Subscribe for exclusive deals, new arrivals & World Cup updates!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo.png" alt="FootballFanStore" class="footer-logo">
+                    <p>Your ultimate destination for premium football jerseys. Wear your passion, support your team!</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#wc2026">World Cup 2026</a></li>
+                        <li><a href="#club">Club Jerseys</a></li>
+                        <li><a href="#retro">Retro Collection</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchange</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            +91 98765 43210
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            support@footballfanstore.com
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Mumbai, India
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FootballFanStore. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <div class="payment-icons">
+                        <span class="payment-icon">💳</span>
+                        <span class="payment-icon">🏦</span>
+                        <span class="payment-icon">📱</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
