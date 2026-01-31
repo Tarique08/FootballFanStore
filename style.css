@@ -402,31 +402,31 @@ button {
 
 .section-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .section-tag {
     display: inline-block;
     background: var(--primary-light);
     color: var(--primary-dark);
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 50px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .section-title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--secondary);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .section-subtitle {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--gray-600);
     max-width: 600px;
     margin: 0 auto;
@@ -454,15 +454,19 @@ button {
 
 .product-image {
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: 3/4;
     background: var(--gray-100);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition);
 }
 
