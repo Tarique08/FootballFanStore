@@ -115,7 +115,7 @@ button {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -648,7 +648,7 @@ button {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 80px;
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
 }
