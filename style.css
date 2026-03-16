@@ -1,19 +1,19 @@
-/* ===== CSS Variables ===== */
+﻿/* Theme variables for light and dark modes */
 :root {
-    /* Core 3-color theme: turquoise (primary theme), black, white */
-    --theme-turquoise: #00C2B3; /* main turquoise from mock */
+    
+    --theme-turquoise: #00C2B3; 
     --theme-black: #000000;
     --theme-white: #FFFFFF;
 
-    /* Map legacy variables to the 3-color theme for site decorations (buttons kept unchanged below) */
+    
     --primary: var(--theme-turquoise);
-    --primary-dark: #008a78; /* slightly darker turquoise */
+    --primary-dark: #008a78; 
     --primary-light: rgba(0,194,179,0.08);
     --secondary: var(--theme-black);
     --secondary-light: rgba(0,0,0,0.65);
     --white: var(--theme-white);
 
-    /* Grayscale kept within black/white family */
+    
     --gray-100: rgba(255,255,255,0.96);
     --gray-200: rgba(255,255,255,0.92);
     --gray-300: rgba(0,0,0,0.12);
@@ -23,17 +23,17 @@
     --gray-700: rgba(0,0,0,0.6);
     --gray-800: rgba(0,0,0,0.75);
 
-    /* Preserve button palette by pinning the previous primary values to button-specific vars */
+    
     --btn-primary-bg: #5BC0BE;
     --btn-primary-dark: #3A9D9B;
 
-    --accent-orange: #F7A41D; /* leave accent colors if used sparsely */
+    --accent-orange: #F7A41D; 
     --danger: #DC3545;
     --success: #28A745;
-    /* Dark surfaces and muted text for the dark theme */
-    --surface: #071316; /* card background */
-    --surface-2: rgba(255,255,255,0.02); /* subtle panel */
-    --muted: rgba(255,255,255,0.72); /* secondary text on dark */
+    
+    --surface: #071316; 
+    --surface-2: rgba(255,255,255,0.02); 
+    --muted: rgba(255,255,255,0.72); 
     
     --font-family: 'Poppins', sans-serif;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -46,9 +46,9 @@
     --radius-xl: 24px;
     --transition: all 0.3s ease;
     --announcement-height: 28px;
-    --header-height: 64px; /* default header height used to offset content */
+    --header-height: 64px; 
 
-    /* Theme defaults: light mode opens by default */
+    
     --page-bg: radial-gradient(circle at 20% 20%, rgba(0,194,179,0.06), transparent 12%),
                radial-gradient(circle at 80% 60%, rgba(0,194,179,0.04), transparent 14%),
                linear-gradient(180deg, #ffffff 0%, #f5fbfa 100%);
@@ -64,6 +64,7 @@
     --nav-link-color: #1f2937;
 }
 
+/* Dark theme overrides */
 html[data-theme='dark'] {
     --page-bg: radial-gradient(circle at 20% 20%, rgba(0,194,179,0.06), transparent 8%),
                radial-gradient(circle at 80% 60%, rgba(0,194,179,0.04), transparent 10%),
@@ -80,7 +81,8 @@ html[data-theme='dark'] {
     --nav-link-color: #f3f4f6;
 }
 
-/* ===== Reset & Base ===== */
+
+/* Base reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -98,17 +100,17 @@ body {
     color: var(--text-color);
     background: var(--page-bg);
     overflow-x: hidden;
-    /* Ensure page content starts below announcement + fixed header */
+    
     padding-top: calc(var(--announcement-height) + var(--header-height));
 }
 
-/* Prevent horizontal scrolling on mobile: enforce viewport-safe widths */
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* Make the site container respect viewport and box-sizing so padding doesn't overflow */
+
 .container {
     box-sizing: border-box;
     max-width: 100%;
@@ -116,14 +118,14 @@ html, body {
     padding-right: 12px;
 }
 
-/* Ensure images and tile artwork never exceed viewport width */
+
 img, .tile-img, .promo-banner-img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Ensure mobile nav overlays the page without causing scroll */
+
 .nav {
     z-index: 1300;
 }
@@ -150,13 +152,14 @@ button {
     border: none;
 }
 
-/* ===== Header ===== */
+
+/* Fixed header and announcement stack */
 .header {
     background: var(--header-bg);
     position: fixed;
     top: var(--announcement-height, 0);
     left: 0;
-    width: 100%; /* ensure it spans the full width */
+    width: 100%; 
     height: var(--header-height);
     z-index: 1000;
     box-shadow: none;
@@ -166,9 +169,9 @@ button {
     transition: var(--transition);
 }
 
-/* Header is fixed and always visible; hide/show classes removed */
 
-/* Announcement bar (top promo) */
+
+
 .announcement-bar {
     position: fixed;
     left: 0;
@@ -184,10 +187,10 @@ button {
     font-size: 14px;
     z-index: 1100;
     transition: height 180ms ease, padding 180ms ease, opacity 180ms ease;
-    overflow: hidden; /* ensure scrolling text is clipped */
+    overflow: hidden; 
 }
 
-/* Scrolling announcement text: slide continuously to the right */
+
 .announcement-bar p {
     display: inline-block;
     white-space: nowrap;
@@ -201,7 +204,7 @@ button {
     100% { transform: translateX(100%); }
 }
 
-/* When announcement is hidden, collapse it and move header into that space */
+
 .announcement-bar.hidden {
     height: 0;
     padding: 0;
@@ -210,15 +213,15 @@ button {
     pointer-events: none;
 }
 
-/* header will fill the top when announcement is collapsed (announcement is the immediate sibling) */
+
 .announcement-bar.hidden + .header {
     top: 0;
 }
 
-/* header bottom gradient removed per request */
 
-/* Top hover sensor - invisible strip at the top to detect cursor */
-/* sensor remains but keep it minimal height */
+
+
+
 #header-sensor {
     position: fixed;
     left: 0;
@@ -243,7 +246,7 @@ button {
     width: auto;
 }
 
-/* give the logo a white 'tape-like' pill background so it stands out on dark header */
+
 .logo {
     display: inline-flex;
     align-items: center;
@@ -331,7 +334,7 @@ button {
 }
 
 .search-btn {
-    background: rgba(64, 224, 208, 0.6); /* Opaque turquoise */
+    background: rgba(64, 224, 208, 0.6); 
     border: none;
     font-size: 20px;
     cursor: pointer;
@@ -345,7 +348,7 @@ button {
 }
 
 .search-btn:hover {
-    background: rgba(64, 224, 208, 1); /* Solid turquoise */
+    background: rgba(64, 224, 208, 1); 
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(64, 224, 208, 0.4);
 }
@@ -399,9 +402,10 @@ button {
     transition: var(--transition);
 }
 
-/* Hero removed — styles trimmed to reduce unused CSS */
 
-/* ===== Buttons ===== */
+
+
+/* Shared button styles */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -447,7 +451,7 @@ button {
     color: var(--secondary);
 }
 
-/* Add-to-cart thanked state */
+
 .add-to-cart-btn.thanked {
     background: var(--success);
     color: var(--white);
@@ -459,7 +463,8 @@ button {
     background: #219642;
 }
 
-/* ===== Trust Badges ===== */
+
+/* Trust badge row */
 .trust-badges {
     padding: 50px 0;
     background: transparent;
@@ -487,9 +492,9 @@ button {
     transform: translateY(-3px);
 }
 
-/* ===== LOGIN BUTTON (Match Search Button Style) ===== */
+
 .login-btn {
-    background: rgba(64, 224, 208, 0.6); /* Same as search button */
+    background: rgba(64, 224, 208, 0.6); 
     border: none;
     font-size: 15px;
     font-weight: 600;
@@ -504,18 +509,18 @@ button {
 }
 
 .login-btn:hover {
-    background: rgba(64, 224, 208, 1); /* Solid turquoise on hover */
+    background: rgba(64, 224, 208, 1); 
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(64, 224, 208, 0.4);
 }
 
-/* ===== USER DROPDOWN (Match Search Button Style) ===== */
+
 .user-dropdown-container {
     position: relative;
 }
 
 .user-btn {
-    background: rgba(64, 224, 208, 0.6); /* Match search button */
+    background: rgba(64, 224, 208, 0.6); 
     border: none;
     font-size: 14px;
     font-weight: 600;
@@ -530,7 +535,7 @@ button {
 }
 
 .user-btn:hover {
-    background: rgba(64, 224, 208, 1); /* Match search button hover */
+    background: rgba(64, 224, 208, 1); 
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(64, 224, 208, 0.4);
 }
@@ -616,7 +621,7 @@ button {
     color: #dc2626;
 }
 
-/* ===== HAMBURGER MENU (MOBILE) ===== */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -647,7 +652,7 @@ button {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* ===== MOBILE NAVIGATION (Chrome-style Dropdown) ===== */
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -707,7 +712,7 @@ button {
         color: #0891b2;
     }
     
-    /* Mobile Login Link */
+    
     .mobile-login-item {
         display: block;
     }
@@ -737,7 +742,7 @@ button {
         height: 18px;
     }
     
-    /* Hide desktop login button on mobile */
+    
     .login-btn {
         display: none;
     }
@@ -751,7 +756,7 @@ button {
         border-radius: 10px;
     }
     
-    /* Mobile user menu items */
+    
     .mobile-user-section {
         border-top: 1px solid rgba(0, 0, 0, 0.08);
         margin-top: 4px;
@@ -814,7 +819,7 @@ button {
     color: var(--gray-600);
 }
 
-/* ===== Product Sections ===== */
+
 .product-section {
     padding: 80px 0;
 }
@@ -857,7 +862,7 @@ button {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* default to 2 jerseys in a row */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 25px;
 }
 
@@ -867,7 +872,7 @@ button {
     }
 }
 
-/* ===== Mainy Section (2x2 Grid) - FIXED VERSION ===== */
+
 .mainy-section {
     padding: 40px 0;
     background: transparent;
@@ -887,7 +892,7 @@ button {
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
     width: 100%;
-    /* Fixed aspect ratio for the entire grid */
+    
     aspect-ratio: 2 / 1;
 }
 
@@ -931,7 +936,7 @@ button {
     white-space: nowrap;
 }
 
-/* ===== Responsive Design for Tiles ===== */
+
 @media (max-width: 1024px) {
     .mainy-section {
         padding: 30px 0;
@@ -994,7 +999,7 @@ button {
     }
 }
 
-/* ===== Budget Section - FIXED VERSION ===== */
+
 .budget-section {
     padding: 20px 0 40px 0;
     background: transparent;
@@ -1046,7 +1051,7 @@ button {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
-/* Budget section responsive */
+
 @media (max-width: 1024px) {
     .budget-section {
         padding: 15px 0 30px 0;
@@ -1083,7 +1088,7 @@ button {
     }
 }
 
-/* ===== Promo Section - FIXED VERSION ===== */
+
 .promo-section {
     padding: 30px 0;
     background: transparent;
@@ -1110,7 +1115,7 @@ button {
     display: block;
 }
 
-/* Promo section responsive */
+
 @media (max-width: 1024px) {
     .promo-section {
         padding: 20px 0;
@@ -1145,7 +1150,8 @@ button {
     }
 }
 
-/* ===== LOGIN MODAL (WEBSITE THEME) ===== */
+
+/* Login modal shell */
 .login-modal {
     position: fixed;
     top: 0;
@@ -1319,20 +1325,21 @@ button {
 .google-btn:hover { background: rgba(66,133,244,0.1); border-color: rgba(66,133,244,0.3); }
 .facebook-btn:hover { background: rgba(24,119,242,0.1); border-color: rgba(24,119,242,0.3); }
 
-/* Scrollbar for modal */
+
 .login-modal-content::-webkit-scrollbar { width:8px; }
 .login-modal-content::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius:10px; }
 .login-modal-content::-webkit-scrollbar-thumb { background: rgba(0,194,179,0.3); border-radius:10px; }
 .login-modal-content::-webkit-scrollbar-thumb:hover { background: rgba(0,194,179,0.5); }
 
-/* Responsive */
+
 @media (max-width: 480px) {
     .login-modal-content { padding: 30px 24px; }
     .login-modal-header h2 { font-size: 26px; }
     .social-buttons { flex-direction: column; }
 }
 
-/* ===== Product Card ===== */
+
+/* Product card interactions */
 .product-card {
     background: var(--surface);
     border-radius: var(--radius-lg);
@@ -1478,7 +1485,7 @@ button {
     margin-top: 50px;
 }
 
-/* ===== Newsletter ===== */
+
 .newsletter {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     padding: 80px 20px;
@@ -1531,7 +1538,8 @@ button {
     background: var(--btn-primary-dark);
 }
 
-/* ===== Footer ===== */
+
+/* Footer layout */
 .footer {
     background: var(--secondary);
     color: var(--muted);
@@ -1637,7 +1645,7 @@ button {
     font-size: 24px;
 }
 
-/* ===== Responsive Design ===== */
+
 @media (max-width: 1024px) {
     .products-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1700,7 +1708,7 @@ button {
         transform: rotate(-45deg) translate(5px, -5px);
     }
     
-    /* hero styles removed */
+    
     
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1741,7 +1749,7 @@ button {
         height: 36px;
     }
     
-    /* hero responsive rules removed */
+    
     
     .btn {
         width: 100%;
@@ -1780,7 +1788,7 @@ html[data-theme='light'] .tile--budget .tile-label {
     color: #ffffff;
 }
 
-/* ===== Utility Classes ===== */
+
 .text-center {
     text-align: center;
 }
@@ -1793,7 +1801,7 @@ html[data-theme='light'] .tile--budget .tile-label {
     margin-bottom: 20px;
 }
 
-/* ===== Cart Icon Image ===== */
+
 .cart-icon-img {
     width: 30px;
     height: 30px;
@@ -1801,7 +1809,7 @@ html[data-theme='light'] .tile--budget .tile-label {
     background: transparent !important;
 }
 
-/* ===== Cleat Animation ===== */
+
 .add-to-cart-btn {
     position: relative;
     overflow: visible;
@@ -1846,10 +1854,10 @@ html[data-theme='light'] .tile--budget .tile-label {
 }
 
 .cleat.kicking {
-    animation: kickCleat 1.2s ease-out; /* 70% slower: 0.7 * 1.7 = 1.19s */
+    animation: kickCleat 1.2s ease-out; 
 }
 
-/* ===== Football Animation - Arc Trajectory ===== */
+
 .football {
     position: fixed;
     width: 35px;
@@ -1868,7 +1876,7 @@ html[data-theme='light'] .tile--budget .tile-label {
     background: transparent !important;
 }
 
-/* ===== Success Message ===== */
+
 .success-message {
     position: fixed;
     top: 50%;
@@ -1909,12 +1917,12 @@ html[data-theme='light'] .tile--budget .tile-label {
     animation: pulse 0.4s ease;
 }
 
-/* ===== Mobile responsive fixes to avoid content cut-off ===== */
+
 @media (max-width: 600px) {
-    /* Let JS compute exact padding for the fixed header; ensure no hard-cut by CSS */
+    
     body { padding-top: 0; }
 
-    /* Tighter header spacing on small screens */
+    
     .header-top .container,
     .header-content {
         padding-left: 12px;
@@ -1922,11 +1930,11 @@ html[data-theme='light'] .tile--budget .tile-label {
         gap: 10px;
     }
 
-    /* Keep navigation available for hamburger dropdown */
+    
     .nav { display: block !important; }
     .hamburger { display: flex !important; }
 
-    /* Product grid becomes a single column to avoid cropping tiles */
+    
     .product-grid {
         grid-template-columns: 1fr !important;
         grid-template-rows: none !important;
@@ -1937,14 +1945,14 @@ html[data-theme='light'] .tile--budget .tile-label {
 
     .product-grid-container { padding: 12px !important; border-radius: 12px !important; }
 
-    /* Make image boxes flexible so children don't overflow */
+    
     .product-image { aspect-ratio: auto !important; height: auto !important; }
     .product-image img { width: auto !important; max-width: 100% !important; max-height: 320px; object-fit: contain !important; }
 
-    /* Reduce promo / budget image heights so they don't push under the fixed header */
+    
     .promo-banner img, .budget-banner img { max-height: 320px; object-fit: cover; border-radius: 12px; }
 
-    /* Success message repositioned for small screens */
+    
     .success-message {
         right: 16px !important;
         left: 16px !important;
@@ -1955,7 +1963,7 @@ html[data-theme='light'] .tile--budget .tile-label {
     }
 }
 
-/* Authoritative mobile dropdown rules (override older conflicting blocks) */
+
 @media (max-width: 768px) {
     .header-actions {
         gap: 10px;
@@ -2024,7 +2032,7 @@ html[data-theme='light'] .tile--budget .tile-label {
     }
 }
 
-/* Light theme refinements */
+
 html[data-theme='light'] .section-title,
 html[data-theme='light'] .product-name,
 html[data-theme='light'] .footer-col h4,
@@ -2062,3 +2070,4 @@ html[data-theme='dark'] .footer-col h4,
 html[data-theme='dark'] .newsletter h2 {
     color: #ffffff;
 }
+
