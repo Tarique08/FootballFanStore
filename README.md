@@ -1,101 +1,133 @@
 # FootballFanStore
 
-A static front-end storefront for football jerseys, built with plain HTML, CSS, and JavaScript.
+FootballFanStore is now a polished storefront MVP for football jerseys with a real TypeScript backend, shared catalog data, guest checkout, newsletter signup, contact capture, and a cleaner vanilla frontend.
 
-## Overview
+## What's New
 
-This project includes:
-- A fixed header with announcement bar and responsive mobile navigation
-- Theme toggle (light/dark) with localStorage persistence
-- Product sections for World Cup 2026, club jerseys, and retro kits
-- Add-to-cart visual animation (cleat kick + ball arc to cart)
-- Cart counter pulse and temporary success message
-- Login/signup modal UI with demo auth state
-- Newsletter form and product reveal-on-scroll animations
+- Rebuilt the landing page into a data-driven storefront
+- Fixed broken encoding issues such as rupee symbols and corrupted promo text
+- Removed demo-only login/signup behavior and replaced it with guest checkout
+- Added a persistent cart using `localStorage`
+- Replaced `alert` and `prompt` flows with:
+  - live search modal
+  - quick view modal
+  - cart drawer
+  - toast notifications
+- Added backend endpoints for:
+  - products
+  - orders
+  - newsletter subscriptions
+  - contact messages
+  - health checks
+- Centralized product content in `data/products.json`
 
-## Tech Stack
+## Stack
 
-- HTML5
-- CSS3 (custom properties, media queries, animations)
-- Vanilla JavaScript (DOM APIs, IntersectionObserver, localStorage)
+- Frontend: HTML, CSS, Vanilla JavaScript
+- Backend: TypeScript on Node.js
+- Persistence: JSON files in `data/`
 
 ## Project Structure
 
 ```text
-footballfanstore/
+footballfanstoreraw/
+|- data/
+|  |- contacts.json
+|  |- newsletter.json
+|  |- orders.json
+|  `- products.json
+|- images/
+|- src/
+|  |- lib/
+|  |  `- store.ts
+|  |- server.ts
+|  `- types.ts
 |- index.html
-|- style.css
+|- package.json
 |- script.js
-|- README.md
-`- images/
-   |- logo.png
-   |- ChOb/
-   |  |- ball_ffs1.png
-   |  |- Budget round.png
-   |  |- cart_ffs1.png
-   |  |- cart_toggle_ffs.png
-   |  |- cleat_ffs1.png
-   |  |- International round.png
-   |  |- NeymarFH.png
-   |  |- Others round.png
-   |  |- Premium Round.png
-   |  |- Retro round.png
-   |  `- Team Set round.png
-   `- products/
-      |- club-1.jpg ... club-8.jpg
-      |- retro-1.jpg ... retro-8.jpg
-      `- wc2026-1.jpg ... wc2026-8.jpg
+|- style.css
+|- tsconfig.json
+`- README.md
 ```
 
-## How to Run
+## API Endpoints
 
-No build tools are required.
+- `GET /api/health`
+- `GET /api/products`
+- `GET /api/products/:id`
+- `POST /api/orders`
+- `POST /api/newsletter`
+- `POST /api/contact`
 
-1. Open the project folder in VS Code.
-2. Open index.html in a browser.
+### Example Order Payload
 
-Optional (recommended in VS Code):
-- Use a local server extension (for example, Live Server) and serve index.html.
+```json
+{
+  "items": [
+    {
+      "productId": "wc2026-argentina-home",
+      "quantity": 1,
+      "size": "M"
+    }
+  ],
+  "customer": {
+    "fullName": "Alex Fan",
+    "email": "alex@example.com",
+    "phone": "+91 99999 99999",
+    "city": "Mumbai",
+    "address": "Bandra West",
+    "pincode": "400050",
+    "notes": "Leave with security if unavailable"
+  }
+}
+```
 
-## Main Files
+## Run Locally
 
-- index.html: Page structure, product cards, footer, and login modal markup.
-- style.css: Full visual system, responsive layout, animations, and theme styles.
-- script.js: Interactions including nav behavior, theme toggle, cart animation, modal logic, and scroll effects.
+Node.js is required.
 
-## Key Behavior Notes
+1. Install dependencies:
 
-- Theme is stored under localStorage key: ffs-theme.
-- Animated cart assets use:
-  - images/ChOb/cleat_ffs1.png
-  - images/ChOb/ball_ffs1.png
-  - images/ChOb/cart_ffs1.png
-  - images/ChOb/cart_toggle_ffs.png
-- script.js sets a default asset base path:
-  - window.ASSET_BASE_PATH = 'images/ChOb/'
+```bash
+npm install
+```
 
-You can override this by setting window.ASSET_BASE_PATH before script.js loads.
+2. Start the development server:
 
-## Current Demo/Placeholder Logic
+```bash
+npm run dev
+```
 
-These parts are intentionally demo-style right now:
-- Search button uses a prompt and alert.
-- Quick View uses an alert.
-- Newsletter submit uses an alert.
-- Login/signup state is front-end only (no backend or real authentication).
+3. Open the app:
 
-## Customization
+```text
+http://localhost:3000
+```
 
-- Update product content in index.html.
-- Adjust theme colors in :root variables in style.css.
-- Replace or add assets in images/ and update paths as needed.
-- Replace alert-based placeholders in script.js with real UI/components.
+## Production Build
 
-## Future Improvements
+```bash
+npm run build
+npm start
+```
 
-- Add a real product data layer (JSON or API)
-- Persist cart items in localStorage
-- Implement real authentication and account pages
-- Add product detail modal/page for Quick View
-- Add filtering, sorting, and search results UI
-- Add accessibility pass (keyboard navigation and ARIA refinements)
+## Data Notes
+
+- `data/products.json` is the shared catalog source for both frontend and backend
+- `data/orders.json` stores mock checkout submissions
+- `data/newsletter.json` stores newsletter signups
+- `data/contacts.json` stores support and custom-order requests
+
+## Current MVP Scope
+
+- Guest checkout only
+- No payment gateway
+- No user accounts or admin panel
+- File-based persistence instead of a database
+
+## Suggested Next Steps
+
+- Add order management or admin views
+- Introduce product filtering by size and price
+- Move persistence to SQLite or Postgres when multi-user traffic matters
+- Add automated API and frontend tests once Node is installed in the environment
